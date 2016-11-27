@@ -3,6 +3,24 @@
 
 var celadon = {}
 
+celadon.app = {
+  selectState: function(stateID){
+    $("#mapa-container").addClass("panel-opened")
+    $("#menu-container").addClass("panel-opened")
+
+    var data = celadon.data.estados[stateID]
+    $(".block-title .chapeu").html("Senadores do estado " + data["Prep"])
+    $(".block-title .estado").html(data["Estado"])
+    $(".stats #pop").html(numberWithCommas(data["Pop"]))
+    $(".stats #capital").html(data["Capital"])
+
+    console.log(data);
+
+
+  }
+}
+
+
 celadon.tpl = {
 
     precompiled_templates:{},
@@ -38,9 +56,6 @@ celadon.tpl = {
     }
 }
 
-
-
-
 // From: http://stackoverflow.com/questions/1197575/can-scripts-be-inserted-with-innerhtml
 
 function nodeScriptReplace(node) {
@@ -68,4 +83,8 @@ function nodeScriptClone(node){
     script.setAttribute( node.attributes[i].name, node.attributes[i].value );
   }
   return script;
+}
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }

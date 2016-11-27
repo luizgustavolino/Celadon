@@ -1,11 +1,10 @@
 <script>
 
     $("svg").find(".state").click(function(){
-      console.log("Yahoooo!");
-    })
-
-    $("svg").find(".state").hover(function(){
-
+        celadon.app.selectState(this.id)
+        $(".state.selected").removeClass("selected")
+        $(this).addClass("selected")
+        $(this).popover("hide")
     })
 
     $('[data-toggle="popover"]').popover();
@@ -20,8 +19,8 @@
   enable-background="new 0 0 353.845 367.766"
   xml:space="preserve">
 <defs>
-  <filter id="dropshadow" height="130%">
-    <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
+  <filter id="dropshadow" height="130%" width="130%">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
     <feOffset dx="2" dy="2" result="offsetblur"/>
     <feComponentTransfer>
         <feFuncA type="linear" slope="0.2"/>
@@ -460,7 +459,7 @@
             227.736,60.068 227.937,60.068 228.186,59.67 227.837,59.62       "/>
 
         <polygon
-          data-content="Espirito Santo" data-toggle="popover" data-container="body" data-trigger="hover" data-placement="top"
+          data-content="Espírito Santo" data-toggle="popover" data-container="body" data-trigger="hover" data-placement="top"
           id="ES" class="state" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
             300.389,208.189 300.77,209.9 301.911,211.328 300.484,212.088 298.392,211.424 297.249,212.373 298.01,214.943 296.108,216.654
             296.772,218.844 298.486,220.461 298.866,223.6 296.012,225.979 295.061,230.164 291.35,230.832 290.685,230.928 290.874,235.969

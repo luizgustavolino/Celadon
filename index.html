@@ -8,22 +8,36 @@
 		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 		<link href="css/celadon.css" rel="stylesheet">
 		<script src="js/celadon.js"></script>
+		<script src="js/data.js"></script>
 		<title>:: Celadon Underground Map ::</title>
 	</head>
 	<body>
 
 		<div class="hero">
 				<div class="hero_bg"></div>
-				<h1>Como pensam e como gastam os Senadores</h1>
+				<h1>Como pensam e gastam os Senadores</h1>
 		</div>
 
 		<div class="center-content">
 				<div id="mapa-container">
 
 				</div>
-				<div id="menu">
-
+				<div id="menu-container">
+					<div class="block-title">
+						<h2>
+							<span class="chapeu">Senadores do estado de</span><br>
+							<span class="estado">Minas Gerais</span>
+						</h2>
+						<div class="stats">
+							<p>População: <span id="pop"></span></p>
+							<p>Capital: <span id="capital"></span></p>
+						</div>
+					</div>
 				</div>
+		</div>
+
+		<div id="fonte-container">
+				<p> <strong>FONTE:</strong> IBGE, Senado Federal - 2016.</p>
 		</div>
 
 		<script type="text/javascript">
