@@ -70,14 +70,17 @@ html, body{
 	width: 35%;
 	top:0px;
 	height: 100%;
+	margin-right: -35%;
 	background-color: #3178C1;
 	overflow: hidden;
 	transition: 0.32s ease-out;
 	border-left: solid 2px rgba(0,0,0,0.1);
+	position: absolute;
+	right: 0;
 }
 
 #menu-container.panel-opened {
-
+	margin-right: 0;
 }
 
 .block-title {
@@ -138,4 +141,18 @@ html, body{
 .state:hover {
 	fill: #FFF;
 	transition: 0.1s linear;
+}
+
+
+
+/* SENADORES */
+
+.senadores {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.senadores img {
+	border-radius: 5px;
+	width: 32%;
 }

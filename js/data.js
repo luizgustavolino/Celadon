@@ -14,7 +14,7 @@ celadon.data.estados = {
     "Estado": "Paraíba",
     "Capital": "João Pessoa",
     "Pop": 3950359,
-    "Prep": "do"
+    "Prep": "da"
   },
   "AL": {
     "Estado": "Alagoas",

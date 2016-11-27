@@ -14,8 +14,19 @@ celadon.app = {
     $(".stats #pop").html(numberWithCommas(data["Pop"]))
     $(".stats #capital").html(data["Capital"])
 
-    console.log(data);
+    var senadores = []
 
+    for (i in celadon.data.senadores) {
+      var senador = celadon.data.senadores[i]
+      if(senador.Estado == stateID){
+        senadores.push(senador)
+
+        $("#spic"+ senadores.length).attr('celadon-id', senador.ID);
+        $("#spic"+ senadores.length).attr('src', '');
+        $("#spic"+ senadores.length).attr('src',
+          'http://www.senado.gov.br/senadores/img/fotos-oficiais/senador'+senador.ID+'.jpg')
+      }
+    }
 
   }
 }
