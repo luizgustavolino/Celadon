@@ -4,7 +4,7 @@ html, body{
 	height: 100%;
 	width: 100%;
 	background-color: #1281B2;
-	background-image: linear-gradient(220deg , #3782A2, #0C516F);
+	background-image: linear-gradient(220deg , #2F7999, #178199);
 }
 
 .hero_bg {
@@ -33,4 +33,35 @@ html, body{
 	z-index: 16;
 	font-size: 22px;
 	line-height: 60px;
+}
+
+.center-content{
+	width: 100%;
+	height: calc(100% - 60px);
+}
+
+#mapa-container {
+	position: relative;
+	float: left;
+	width: 100%;
+	height: 100%;
+}
+
+#mapa-container svg{
+	width: 100%;
+	height: 100%;
+	padding: 10%;
+}
+
+/* MAP */
+.state {
+		cursor: default;
+		fill: rgba(230,230,250,0.8);
+		stroke: rgba(18,151,178,0.8);
+		stroke-width: 0.5px;
+}
+
+.state:hover {
+	fill: #43a7c0;
+	transition: 0.1s linear;
 }
