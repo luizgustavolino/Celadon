@@ -8,6 +8,19 @@ html, body{
 	font-family: 'Raleway', sans-serif;
 }
 
+body{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+h1,h2,h3,p,span{
+	cursor: default;
+}
+
 .transparent {
 	opacity: 0;
 }
@@ -44,9 +57,13 @@ html, body{
 
 .center-content{
 	width: 100%;
-	height: calc(100% - 80px);
-	perspective: 1420px;
+	height: 100%;
 	overflow: hidden;
+}
+
+.map{
+	perspective: 800px;
+	height: calc(100% - 80px);
 }
 
 #mapa-container {
@@ -58,8 +75,12 @@ html, body{
 }
 
 #mapa-container.panel-opened {
-	width: 65%;
-	transform: rotateY(18deg);
+	width: 60%;
+}
+
+.panel-opened .map{
+	transform: rotateY(5deg);
+	transition:  0.32s ease-out;
 }
 
 #mapa-container svg{
@@ -71,10 +92,10 @@ html, body{
 /* Menu */
 
 #menu-container {
-	width: 35%;
+	width: 40%;
 	top:0px;
 	height: 100%;
-	margin-right: -35%;
+	margin-right: -40%;
 	background-color: #3178C1;
 	overflow: hidden;
 	transition: 0.32s ease-out;
@@ -120,8 +141,8 @@ html, body{
 /* STATS do Estado */
 .stats {
 	padding: 5px 0 0 0;
-  border-top: solid 1px #CCC;
-  margin-top: 5px;
+	border-top: solid 1px #CCC;
+	margin-top: 5px;
 	font-family: Arial;
 }
 .stats p{
@@ -152,12 +173,16 @@ html, body{
 .senadores {
 	text-align: center;
 	margin-top: 20px;
+	margin-bottom: 10px;
 }
 
 .senadores img {
+
 	border-radius: 5px;
-	width: 32%;
+	width: 22%;
 	background-color: #ccc;
+	margin: 0px 10px;
+	border-bottom: solid orange 5px;
 
 	filter: none;
 	-webkit-filter: grayscale(90%);
@@ -169,7 +194,11 @@ html, body{
 	transition: all 300ms ease;
 }
 
-.senadores img:hover, .senadores .selected {
+.senadores img:hover {
+	opacity: 1.0;
+}
+
+.senadores .selected {
 	-webkit-filter: grayscale(0%);
 	-moz-filter:    grayscale(0%);
 	-ms-filter:     grayscale(0%);
@@ -180,25 +209,26 @@ html, body{
 /* DADOS */
 
 .block-data {
-		top: 0px;
-		bottom: 0px;
-		background-color: #0D497D;
-		border-radius: 5px;
-		margin: 10px 10px 10px 10px;
-		padding: 10px;
-		text-align: left;
-		transition: opacity 0.2s ease;
+	top: 0px;
+	bottom: 0px;
+	background-color: #0D497D;
+	border-radius: 5px;
+	margin: 10px 10px 10px 10px;
+	padding: 10px;
+	text-align: left;
+	transition: opacity 0.2s ease;
 }
 
 .arrow-up{
 	margin-top: -24px;
 	margin-left: calc(66% - 16% - 15px);
+	transition: all .25s ease;
 }
 
 .arrow-up polygon{
 	fill: #0D497D;
 	stroke: #3178C1;
-  stroke-width: 2px;
+	stroke-width: 2px;
 }
 
 .arrow-up rect {
@@ -210,6 +240,8 @@ html, body{
 	padding: 0;
 	margin: 0;
 	font-size: 28px;
+	border-bottom: solid 1px white;
+	margin-bottom: 15px;
 }
 
 .block-data h2 .senador {
@@ -220,4 +252,29 @@ html, body{
 .block-data h2 .chapeu {
 	color: #56a4f5;
 	font-size: 14px;
+}
+
+
+/* RELATORIOS */
+.split {
+	display: flex;
+}
+
+.split .gastos, .split .atividade {
+	width: calc(50% - 5px);
+	background-color: #185a96;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.split .gastos{
+	margin-right: 10px;
+}
+
+.split h3 {
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #CCC;
+	text-align: center;
+	margin: 0px;
 }

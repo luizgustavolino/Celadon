@@ -21,3 +21,6 @@ https://css-tricks.com/scale-svg/
 
 // Pronomes de tratamento para senadores
 http://www.casacivil.pr.gov.br/modules/conteudo/conteudo.php?conteudo=9
+
+// Seleção de tags HTML no jquery-3
+https://api.jquery.com/attribute-equals-selector/

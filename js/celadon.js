@@ -55,6 +55,15 @@ celadon.app = {
         $(".block-data .senador").html(senador.Nome)
         $(".block-data .chapeu").html(senador.Tratamento)
 
+        switch (parseInt(order)) {
+          case 1:
+            $(".arrow-up").css('margin-left','calc(26% - 25px)'); break;
+          case 2:
+            $(".arrow-up").css('margin-left','calc(50% - 15px)'); break;
+          case 3:
+            $(".arrow-up").css('margin-left','calc(78% - 25px)'); break;
+          default: break;
+        }
 
         $(".block-data").removeClass("transparent")
       }
