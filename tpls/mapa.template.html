@@ -2,7 +2,11 @@
 
     $("svg").find(".state").click(function(){
         celadon.app.selectState(this.id)
+        celadon.app.unselectAllSenadores()
+
+        $(".block-data").addClass("transparent")
         $(".state.selected").removeClass("selected")
+
         $(this).addClass("selected")
         $(this).popover("hide")
     })

@@ -4,6 +4,7 @@
 var celadon = {}
 
 celadon.app = {
+
   selectState: function(stateID){
     $("#mapa-container").addClass("panel-opened")
     $("#menu-container").addClass("panel-opened")
@@ -19,16 +20,47 @@ celadon.app = {
     for (i in celadon.data.senadores) {
       var senador = celadon.data.senadores[i]
       if(senador.Estado == stateID){
-        senadores.push(senador)
 
-        $("#spic"+ senadores.length).attr('celadon-id', senador.ID);
-        $("#spic"+ senadores.length).attr('src', '');
-        $("#spic"+ senadores.length).attr('src',
-          'http://www.senado.gov.br/senadores/img/fotos-oficiais/senador'+senador.ID+'.jpg')
+        senadores.push(senador)
+        var order = senadores.length
+        var baseURL = "http://www.senado.gov.br/senadores/img/fotos-oficiais/senador"
+        $("#spic"+ order).attr('celadon-id', senador.ID);
+        $("#spic"+ order).attr('celadon-order', order);
+        $("#spic"+ order).attr('src', '');
+        $("#spic"+ order).attr('src', baseURL+senador.ID+'.jpg')
+
+        $("#spic"+ senadores.length).unbind('click').click(function(){
+          var id = $(this).attr('celadon-id');
+          celadon.app.selectSenador(id)
+        })
+
       }
     }
+  },
 
+  unselectAllSenadores: function(){
+    $(".senadores .selected").removeClass("selected")
+  },
+
+  selectSenador: function(idSenador){
+    for (i in celadon.data.senadores) {
+      var senador = celadon.data.senadores[i]
+      if(senador.ID == idSenador){
+
+        $(".senadores .selected").removeClass("selected")
+        $("[celadon-id="+senador.ID+"]").addClass("selected")
+
+        var order =  $(".senadores .selected").attr("celadon-order")
+        $(".senadores .selected").css("selected")
+        $(".block-data .senador").html(senador.Nome)
+        $(".block-data .chapeu").html(senador.Tratamento)
+
+
+        $(".block-data").removeClass("transparent")
+      }
+    }
   }
+
 }
 
 

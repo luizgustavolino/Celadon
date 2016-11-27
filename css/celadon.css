@@ -8,6 +8,10 @@ html, body{
 	font-family: 'Raleway', sans-serif;
 }
 
+.transparent {
+	opacity: 0;
+}
+
 .hero_bg {
 	border-top: 4px solid green;
 	background: rgb(0,54,115);
@@ -183,6 +187,7 @@ html, body{
 		margin: 10px 10px 10px 10px;
 		padding: 10px;
 		text-align: left;
+		transition: opacity 0.2s ease;
 }
 
 .arrow-up{
@@ -204,14 +209,15 @@ html, body{
 .block-data h2{
 	padding: 0;
 	margin: 0;
-	font-size: 12px;
+	font-size: 28px;
 }
 
 .block-data h2 .senador {
 	color: #fff;
-	font-size: 20px;
+	margin-top: 15px;
 }
 
 .block-data h2 .chapeu {
-	color: #3da4f0;
+	color: #56a4f5;
+	font-size: 14px;
 }
