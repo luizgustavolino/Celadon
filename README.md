@@ -24,3 +24,7 @@ http://www.casacivil.pr.gov.br/modules/conteudo/conteudo.php?conteudo=9
 
 // Seleção de tags HTML no jquery-3
 https://api.jquery.com/attribute-equals-selector/
+
+
+// Formatação de número para R$
+http://wbruno.com.br/expressao-regular/formatar-em-moeda-reais-expressao-regular-em-javascript/

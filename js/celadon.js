@@ -65,6 +65,38 @@ celadon.app = {
           default: break;
         }
 
+        // Gastos
+
+        for( s in celadon.data.gastos ){
+          if ( celadon.data.gastos[s].ID == idSenador){
+
+              var valores = []
+              var registroDeGastos  = celadon.data.gastos[s]
+
+              for( ref in celadon.data.referenciaDeGastos){
+                var gasto = {}
+                gasto.desc  = celadon.data.referenciaDeGastos[ref]
+                gasto.valor = registroDeGastos[ref]
+                valores.push(gasto);
+              }
+
+              valores.sort(function(a,b){
+                return b.valor - a.valor
+              })
+
+              for (var i = 0; i < 3; i++) {
+                var item = valores[i];
+
+                $(".gasto.top"+(i+1)+" .em2016").html(formatReal(item.valor))
+                $(".gasto.top"+(i+1)+" .label").html(item.desc)
+
+              }
+
+
+              console.log(valores);
+          }
+        }
+
         $(".block-data").removeClass("transparent")
       }
     }
@@ -138,5 +170,15 @@ function nodeScriptClone(node){
 }
 
 function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
+function formatReal(valor){
+  var int = parseInt(valor*100)
+  var tmp = int+'';
+  tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
+  if( tmp.length > 6 ){
+    tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+  }
+  return "R$ "+tmp;
 }

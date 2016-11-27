@@ -257,14 +257,15 @@ h1,h2,h3,p,span{
 
 /* RELATORIOS */
 .split {
-	display: flex;
+
 }
 
 .split .gastos, .split .atividade {
-	width: calc(50% - 5px);
+	width: 100%;
 	background-color: #185a96;
 	border-radius: 5px;
 	padding: 10px;
+	margin-top: 10px;
 }
 
 .split .gastos{
@@ -277,4 +278,66 @@ h1,h2,h3,p,span{
 	color: #CCC;
 	text-align: center;
 	margin: 0px;
+}
+
+.gasto.top1{
+	margin-top: 20px;
+}
+
+.gasto{
+	padding: 5px 5px;
+	font-family: Arial;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.gasto .label{
+	font-size: 14px;
+	text-align: right;
+	font-weight: normal;
+	max-width: 40%;
+	flex-basis: 40%;
+	flex:4;
+}
+
+.gasto .valores{
+	height: 32px;
+	position: relative;
+	flex-basis: 60%;
+	flex:6;
+}
+
+.gasto .em2016, .gasto .media {
+	position: absolute;
+	left:0;
+}
+
+.gasto .media {
+	background-color: #3497e4;
+	height: 100%;
+	width: 80%;
+	overflow: visible;
+}
+
+.media span {
+	background-color: red;
+	height: 120%;
+	top: -10%;
+	right: 0px;
+	width: 5px;
+	position: absolute;
+	background-color: #3497e4
+}
+
+.gasto .em2016 {
+	width: 50%;
+	top: 2px;
+	bottom: 2px;
+	text-align: right;
+	background-color: #d4b342;
+	color: #423c32;
+	font-size: 12px;
+	padding: 6px 8px;
+	font-weight: normal;
+	box-shadow: 2px 0px 3px rgba(0,0,0,0.32);
 }
