@@ -138,6 +138,35 @@ celadon.app = {
                   $(".info .tier0").html(atividade.Relatadas)
                 }
               }
+
+              var words = ["Hello", "world", "normally", "you", "want", "more", "words", "than", "this"]
+
+              var listaInteresses = {}
+              for (i in celadon.data.interesses) {
+                  let data = celadon.data.interesses[i]
+                  if (data.ID == idSenador) {
+                      let words = data.Palavras.split(",")
+                      for(j in words){
+                        var word = words[j].trim()
+                        if( listaInteresses[word] != null ){
+                            listaInteresses[word] += 2
+                        }else{
+                            listaInteresses[word] = 2
+                        }
+                      }
+                  }
+              }
+
+              var pesos = []
+              for(i in listaInteresses){
+                pesos.push({
+                  "text": i,
+                  "size": listaInteresses[i] * 10
+                })
+              }
+
+              $("#world-cloud").html("")
+              showWords('#world-cloud', pesos)
           }
         }
 

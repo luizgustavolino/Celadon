@@ -474,3 +474,10 @@ h1,h2,h3,p,span{
 	display: flex;
 	align-items: center;
 }
+
+#world-cloud{
+	width: 100%;
+  overflow: hidden;
+	margin-top: 25px;
+  text-align: center;
+}
