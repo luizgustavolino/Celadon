@@ -31,3 +31,6 @@ http://wbruno.com.br/expressao-regular/formatar-em-moeda-reais-expressao-regular
 
 // Flex box no CSS3
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+// PIE Chart
+http://www.elated.com/articles/snazzy-animated-pie-chart-html5-jquery/
