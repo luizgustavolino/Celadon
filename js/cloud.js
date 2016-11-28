@@ -2,7 +2,7 @@
 function wordCloud(selector) {
 
     var fill = d3.scale.linear()
-    .range(["#438acc", "#338afc"]);
+    .range(["#438acc", "#438acc"]);
 
     //Construct the word cloud's SVG element
     var svg = d3.select(selector).append("svg")
@@ -20,7 +20,7 @@ function wordCloud(selector) {
         //Entering words
         cloud.enter()
             .append("text")
-            .style("font-family", "Impact")
+            .style("font-family", "Trebuchet MS, Helvetica, sans-serif")
             .style("fill", function(d, i) { return fill(i); })
             .attr("text-anchor", "middle")
             .attr('font-size', 1)
@@ -59,7 +59,7 @@ function wordCloud(selector) {
                 .words(words)
                 .padding(5)
                 .rotate(function() { return ~~(Math.random() * 2) * 5; })
-                .font("Impact")
+                .font("Trebuchet MS, Helvetica, sans-serif")
                 .fontSize(function(d) { return d.size; })
                 .on("end", draw)
                 .start();

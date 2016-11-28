@@ -161,7 +161,7 @@ celadon.app = {
               for(i in listaInteresses){
                 pesos.push({
                   "text": i,
-                  "size": listaInteresses[i] * 10
+                  "size": listaInteresses[i] * 5
                 })
               }
 
