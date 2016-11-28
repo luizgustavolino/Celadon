@@ -23,6 +23,7 @@ h1,h2,h3,p,span{
 
 .transparent {
 	opacity: 0;
+	display: none;
 }
 
 .hero_bg {
