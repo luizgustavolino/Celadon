@@ -140,7 +140,7 @@ celadon.app = {
                   myTotal += atividade.Proposicoes
                   myTotal += atividade.Relatadas
 
-                  var myColor = ['#ec7a41', '#d4b342', '#a1d442'];
+                  var myColor = ['#ec7a41', '#d4b342', '#3497e4'];
 
                   for (var i = 0; i < data.length; i++) {
 
