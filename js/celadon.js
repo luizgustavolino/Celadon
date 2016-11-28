@@ -133,6 +133,9 @@ celadon.app = {
                   $(".pie.tier1").css("stroke-dasharray", tier1 + " 10000")
                   $(".pie.tier2").css("stroke-dasharray", tier2 + " 10000")
 
+                  $(".info .tier2").html(atividade.Proposicoes)
+                  $(".info .tier1").html(atividade.Pronunciamentos)
+                  $(".info .tier0").html(atividade.Relatadas)
                 }
               }
           }
