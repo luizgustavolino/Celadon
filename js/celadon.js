@@ -90,10 +90,10 @@ celadon.app = {
                   }
                 }
 
-                var médiaGasta = totalGastoPorRef/totalCount
+                var mediaGasta = totalGastoPorRef/totalCount
 
                 gasto.max   = maxGasto
-                gasto.media = médiaGasta
+                gasto.media = mediaGasta
                 gasto.desc  = celadon.data.referenciaDeGastos[ref]
                 gasto.valor = registroDeGastos[ref]
                 valores.push(gasto);
