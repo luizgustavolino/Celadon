@@ -118,8 +118,6 @@ celadon.app = {
 
               }
 
-
-              console.log(valores);
           }
         }
 

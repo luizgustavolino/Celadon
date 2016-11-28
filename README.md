@@ -28,3 +28,6 @@ https://api.jquery.com/attribute-equals-selector/
 
 // Formatação de número para R$
 http://wbruno.com.br/expressao-regular/formatar-em-moeda-reais-expressao-regular-em-javascript/
+
+// Flex box no CSS3
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/

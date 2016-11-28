@@ -741,18 +741,18 @@ celadon.data.senadores = [
 
 
 celadon.data.referenciaDeGastos = {
-    "Aluguel de imoveis para escritorio politico": "Aluguel",
-    "Aquisicao de material de consumo": "Material de consumo",
+    "Aluguel de imoveis para escritorio politico": "Aluguel de imóveis para escritório político",
+    "Aquisicao de material de consumo": "Aquisição de material de consumo",
     "Locomocao. hospedagem. alimentacao. combustiveis e": "Locomoção, hospedagem, alimentação e combustível",
     "Contratacao de servicos de apoio ao parlamentar": "Apoio parlamentar",
-    "Divulgacao da atividade parlamentar": "Divulgação",
+    "Divulgacao da atividade parlamentar": "Divulgação da atividade parlamentar",
     "Passagens aereas. aquaticas e terrestres nacionais": "Passagens aérias, aquáticas e terrestres",
     "Servicos de Seguranca Privada": "Segurança Privada",
     "Diarias":"Diárias",
     "Ressarcimento de Passagens":"Ressarcimento de Passagens",
     "Combustiveis": "Combustíveis",
     "Outros materiais": "Outros materiais",
-    "Correios": "Correios"
+    "Correios": "Despesas de Correios"
 }
 
 celadon.data.gastos = {
