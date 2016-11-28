@@ -74,10 +74,30 @@ celadon.app = {
               var registroDeGastos  = celadon.data.gastos[s]
 
               for( ref in celadon.data.referenciaDeGastos){
+
                 var gasto = {}
+
+                var totalGastoPorRef = 0// media 46.281,61  max 186.758
+                var totalCount       = 0
+                var maxGasto         = -1
+
+                for (g in celadon.data.gastos) {
+                  if(celadon.data.gastos[g][ref] != null){
+                    var v = celadon.data.gastos[g][ref]
+                    totalGastoPorRef += v
+                    totalCount += 1
+                    if(maxGasto < v) maxGasto = v
+                  }
+                }
+
+                var médiaGasta = totalGastoPorRef/totalCount
+
+                gasto.max   = maxGasto
+                gasto.media = médiaGasta
                 gasto.desc  = celadon.data.referenciaDeGastos[ref]
                 gasto.valor = registroDeGastos[ref]
                 valores.push(gasto);
+
               }
 
               valores.sort(function(a,b){
@@ -86,6 +106,12 @@ celadon.app = {
 
               for (var i = 0; i < 3; i++) {
                 var item = valores[i];
+
+                var tamanhoDaMedia = ((item.media / item.max) * 100) + "%"
+                var tamanhoDaDesse = ((item.valor / item.max) * 100) + "%"
+              
+                $(".gasto.top"+(i+1)+" .em2016").css("width", tamanhoDaDesse)
+                $(".gasto.top"+(i+1)+" .media").css("width", tamanhoDaMedia)
 
                 $(".gasto.top"+(i+1)+" .em2016").html(formatReal(item.valor))
                 $(".gasto.top"+(i+1)+" .label").html(item.desc)
