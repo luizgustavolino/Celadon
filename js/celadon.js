@@ -107,8 +107,8 @@ celadon.app = {
               for (var i = 0; i < 3; i++) {
                 var item = valores[i];
 
-                var tamanhoDaMedia = (20 + (0.8 * (item.media / item.max)) * 100) + "%"
-                var tamanhoDaDesse = (20 + (0.8 * (item.valor / item.max)) * 100) + "%"
+                var tamanhoDaMedia = (30 + (0.7 * (item.media / item.max)) * 100) + "%"
+                var tamanhoDaDesse = (30 + (0.7 * (item.valor / item.max)) * 100) + "%"
 
                 $(".gasto.top"+(i+1)+" .em2016").css("width", tamanhoDaDesse)
                 $(".gasto.top"+(i+1)+" .media").css("width", tamanhoDaMedia)
