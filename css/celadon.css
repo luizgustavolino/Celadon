@@ -102,6 +102,7 @@ h1,h2,h3,p,span{
 	border-left: solid 2px rgba(0,0,0,0.1);
 	position: absolute;
 	right: 0;
+	overflow: scroll;
 }
 
 #menu-container.panel-opened {
@@ -299,7 +300,7 @@ h1,h2,h3,p,span{
 }
 
 .gasto .valores{
-	height: 32px;
+	height: 35px;
 	position: relative;
 	flex-basis: 40%;
 	flex:6;
@@ -391,8 +392,25 @@ h1,h2,h3,p,span{
 	background-color: #3497e4;
 }
 
+.box.dark-orange {
+	background-color: #ec7a41;
+}
+
+.box.green {
+	background-color: #a1d442;
+}
+
 .disclaimer {
 	font-size: 11px;
 	color: #cccccc;
 	width: 70%;
+}
+
+.atividade .chart {
+	height: 300px;
+	flex: 3;
+}
+
+.atividade .legenda{
+	flex: 1;
 }
