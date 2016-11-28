@@ -107,9 +107,9 @@ celadon.app = {
               for (var i = 0; i < 3; i++) {
                 var item = valores[i];
 
-                var tamanhoDaMedia = ((item.media / item.max) * 100) + "%"
-                var tamanhoDaDesse = ((item.valor / item.max) * 100) + "%"
-              
+                var tamanhoDaMedia = (20 + (0.8 * (item.media / item.max)) * 100) + "%"
+                var tamanhoDaDesse = (20 + (0.8 * (item.valor / item.max)) * 100) + "%"
+
                 $(".gasto.top"+(i+1)+" .em2016").css("width", tamanhoDaDesse)
                 $(".gasto.top"+(i+1)+" .media").css("width", tamanhoDaMedia)
 
@@ -200,6 +200,14 @@ function numberWithCommas(x) {
 }
 
 function formatReal(valor){
+
+  if (valor > 1000) {
+      return "R$ "+parseInt(valor/1000)+"mil"
+  }else{
+      return "R$ "+parseInt(valor)
+  }
+
+
   var int = parseInt(valor*100)
   var tmp = int+'';
   tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
