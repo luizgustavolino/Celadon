@@ -122,39 +122,17 @@ celadon.app = {
                 var atividade = celadon.data.atividades[index]
                 if(atividade.ID == idSenador) {
 
-                  // pie chart
-                  var canvas  = document.getElementById("canvas");
-                  var ctx     = canvas.getContext("2d");
-                  ctx.clearRect(0, 0, canvas.width, canvas.height);
+                  var total = 0
+                  total += atividade.Pronunciamentos
+                  total += atividade.Proposicoes
+                  total += atividade.Relatadas
 
-                  var lastend = (3*Math.PI)/2;
+                  var tier1 = 471 * (atividade.Pronunciamentos/total + atividade.Proposicoes/total)
+                  var tier2 = 471 * (atividade.Proposicoes/total)
 
-                  var data = [
-                      atividade.Proposicoes,
-                      atividade.Pronunciamentos,
-                      atividade.Relatadas
-                  ];
+                  $(".pie.tier1").css("stroke-dasharray", tier1 + " 10000")
+                  $(".pie.tier2").css("stroke-dasharray", tier2 + " 10000")
 
-                  var myTotal = 0
-                  myTotal += atividade.Pronunciamentos
-                  myTotal += atividade.Proposicoes
-                  myTotal += atividade.Relatadas
-
-                  var myColor = ['#ec7a41', '#d4b342', '#3497e4'];
-
-                  for (var i = 0; i < data.length; i++) {
-
-                    ctx.fillStyle = myColor[i];
-                    ctx.beginPath();
-                    ctx.moveTo(canvas.width / 2, canvas.height / 2);
-
-                    // Arc Parameters: x, y, radius, startingAngle (radians), endingAngle (radians), antiClockwise (boolean)
-                    ctx.arc(canvas.width / 2, canvas.height / 2, canvas.height / 2, lastend, lastend + (Math.PI * 2 * (data[i] / myTotal)), false);
-                    ctx.lineTo(canvas.width / 2, canvas.height / 2);
-                    ctx.fill();
-
-                    lastend += Math.PI * 2 * (data[i] / myTotal);
-                  }
                 }
               }
           }

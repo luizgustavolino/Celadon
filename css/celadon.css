@@ -419,3 +419,29 @@ h1,h2,h3,p,span{
 .chart canvas{
 	display: block;
 }
+
+.chart svg {
+	margin: 0 auto;
+  transform: rotate(-90deg);
+  background: #3497e4;
+  border-radius: 50%;
+  display: block;
+}
+
+/* 471 */
+
+.pie{
+	fill: rgba(0,0,0,0);
+	stroke-width: 150;
+	transition: stroke-dasharray .3s ease;
+}
+
+.pie.tier1 {
+	stroke: #d4b342;
+	stroke-dasharray: 280 1000;
+}
+
+.pie.tier2 {
+	stroke: #ec7a41;
+	stroke-dasharray: 200 1000;
+}
